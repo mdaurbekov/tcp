@@ -17,7 +17,7 @@ public class Main {
                      BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
                     String word = in.readLine();
                     System.out.println(word);
-                    out.write("Это Сервер! Вы написали: " + word + "\n");
+                    out.write("Это Сервер! Вы написали: " + word + " порт: " + clientSocket.getPort() + "\n");
                     out.flush();
                 } catch (Exception e) {
                     throw new RuntimeException(e.getMessage());
